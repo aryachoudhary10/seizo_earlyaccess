@@ -490,15 +490,24 @@
         revealElements.forEach(el => observer.observe(el));
 
 
+        // --- FIREBASE SCRIPT ---
+        // These values will be replaced by the GitHub Action
         const firebaseConfig = {
-        apiKey: "${FIREBASE_API_KEY}",
-        authDomain: "${FIREBASE_AUTH_DOMAIN}",
-        projectId: "${FIREBASE_PROJECT_ID}",
-        storageBucket: "${FIREBASE_STORAGE_BUCKET}",
-        messagingSenderId: "${FIREBASE_MESSAGING_SENDER_ID}",
-        appId: "${FIREBASE_APP_ID}"
-};
+            // apiKey: "__FIREBASE_API_KEY__",
+            // authDomain: "__FIREBASE_AUTH_DOMAIN__",
+            // projectId: "__FIREBASE_PROJECT_ID__",
+            // storageBucket: "__FIREBASE_STORAGE_BUCKET__",
+            // messagingSenderId: "__FIREBASE_MESSAGING_SENDER_ID__",
+            // appId: "__FIREBASE_APP_ID__"
+              apiKey: "AIzaSyDri8MMXQPqFf99IY8Nbb70-z0JV2mH3vg",
+            authDomain: "seizoearlyaccess.firebaseapp.com",
+            projectId: "seizoearlyaccess",
+            storageBucket: "seizoearlyaccess.firebasestorage.app",
+            messagingSenderId: "170327652480",
+            appId: "1:170327652480:web:0f9b10cd0c8998b29d4e65",
+            measurementId: "G-Q7ZS6XWMRZ"
 
+        };
 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
         import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
